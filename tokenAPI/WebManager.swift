@@ -13,6 +13,7 @@ class WebManager {
     
     let kToken = "token"
     let token = "ueYcVXc-OH-AuhZy98"
+    private let baseURLPath = "https://bnet.i-partner.ru/testAPI/"
     
     func saveToken() {
         UserDefaults.standard.set(token, forKey: kToken)
@@ -24,17 +25,14 @@ class WebManager {
     
     func newSession(completion: @escaping ([NewSessionModel])->()) {
         
-        let url = URL(string: "https://bnet.i-partner.ru/testAPI/")!
-        var request = URLRequest(url: url)
+        var components = URLComponents(string: baseURLPath)!
+        components.queryItems = [URLQueryItem(name: "a", value: "new_session")]
+        components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+        var request = URLRequest(url: components.url!)
         request.httpMethod = "POST"
-        request.setValue(token, forHTTPHeaderField: "Authorization")
+        request.setValue(token, forHTTPHeaderField: kToken)
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
-//            if let res = response as? HTTPURLResponse {
-//                let code = res.statusCode
-//                print(code)
-//            }
             
             guard let data = data else { return }
             
@@ -42,6 +40,7 @@ class WebManager {
                 let newSessionModel = try JSONDecoder().decode([NewSessionModel].self, from: data)
                 completion(newSessionModel)
             } catch let error {
+                completion([])
                 print(error)
             }
             
@@ -50,17 +49,14 @@ class WebManager {
     
     func getEntries(session: String, completion: @escaping ([GetEntriesModel])->()) {
         
-        let url = URL(string: "https://bnet.i-partner.ru/testAPI/")!
-        var request = URLRequest(url: url)
+        var components = URLComponents(string: baseURLPath)!
+        components.queryItems = [URLQueryItem(name: "a", value: "get_entries")]
+        components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+        var request = URLRequest(url: components.url!)
         request.httpMethod = "POST"
-        request.setValue(token, forHTTPHeaderField: "Content-Type")
+        request.setValue(token, forHTTPHeaderField: kToken)
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
-//            if let res = response as? HTTPURLResponse {
-//                let code = res.statusCode
-//                print(code)
-//            }
             
             guard let data = data else { return }
             
@@ -68,6 +64,7 @@ class WebManager {
                 let getEntriesModel = try JSONDecoder().decode([GetEntriesModel].self, from: data)
                 completion(getEntriesModel)
             } catch let error {
+                completion([])
                 print(error)
             }
             
@@ -76,17 +73,14 @@ class WebManager {
     
     func addEntry(session: String, body: String, completion: @escaping ([AddEntryModel])->()) {
         
-        let url = URL(string: "https://bnet.i-partner.ru/testAPI/")!
-        var request = URLRequest(url: url)
+        var components = URLComponents(string: baseURLPath)!
+        components.queryItems = [URLQueryItem(name: "a", value: "add_entry")]
+        components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+        var request = URLRequest(url: components.url!)
         request.httpMethod = "POST"
-        request.setValue(token, forHTTPHeaderField: "Content-Type")
+        request.setValue(token, forHTTPHeaderField: kToken)
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
-//            if let res = response as? HTTPURLResponse {
-//                let code = res.statusCode
-//                print(code)
-//            }
             
             guard let data = data else { return }
             
@@ -94,6 +88,7 @@ class WebManager {
                 let addEntryModel = try JSONDecoder().decode([AddEntryModel].self, from: data)
                 completion(addEntryModel)
             } catch let error {
+                completion([])
                 print(error)
             }
             
