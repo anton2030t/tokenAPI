@@ -17,51 +17,48 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата создания:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8b-al-zD6">
-                        <rect key="frame" x="10" y="10" width="110" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <rect key="frame" x="10" y="10" width="97" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата модификации:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cki-ib-IE3">
-                        <rect key="frame" x="10" y="38" width="118" height="15"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <rect key="frame" x="10" y="27" width="109" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02.02.2020" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtN-97-vNQ">
-                        <rect key="frame" x="128" y="10" width="80" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <rect key="frame" x="112" y="10" width="70" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02.02.2020" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3Y-Pq-Pse">
-                        <rect key="frame" x="136" y="38" width="66" height="15"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <rect key="frame" x="124" y="27" width="60.5" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePv-jp-HSC">
-                        <rect key="frame" x="2" y="63" width="355.5" height="83"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePv-jp-HSC">
+                        <rect key="frame" x="2" y="41.5" width="355" height="104.5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc</string>
                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ePv-jp-HSC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="0Wy-Ml-45F"/>
                     <constraint firstItem="cki-ib-IE3" firstAttribute="baseline" secondItem="e3Y-Pq-Pse" secondAttribute="baseline" id="0mH-2R-KAW"/>
                     <constraint firstItem="F8b-al-zD6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="4at-4Y-wnT"/>
-                    <constraint firstItem="ePv-jp-HSC" firstAttribute="top" secondItem="cki-ib-IE3" secondAttribute="bottom" constant="10" id="F4E-gA-NJY"/>
+                    <constraint firstItem="ePv-jp-HSC" firstAttribute="top" secondItem="cki-ib-IE3" secondAttribute="bottom" constant="1" id="F4E-gA-NJY"/>
                     <constraint firstItem="F8b-al-zD6" firstAttribute="firstBaseline" secondItem="rtN-97-vNQ" secondAttribute="firstBaseline" id="Lx9-nO-Swn"/>
                     <constraint firstItem="ePv-jp-HSC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="MYS-d0-n3X"/>
-                    <constraint firstAttribute="bottom" secondItem="ePv-jp-HSC" secondAttribute="bottom" constant="2" id="Nrx-v7-1qj"/>
-                    <constraint firstItem="rtN-97-vNQ" firstAttribute="leading" secondItem="F8b-al-zD6" secondAttribute="trailing" constant="8" id="Q2g-64-UF7"/>
+                    <constraint firstItem="rtN-97-vNQ" firstAttribute="leading" secondItem="F8b-al-zD6" secondAttribute="trailing" constant="5" id="Q2g-64-UF7"/>
                     <constraint firstItem="F8b-al-zD6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="b8e-7n-qVS"/>
-                    <constraint firstItem="e3Y-Pq-Pse" firstAttribute="top" secondItem="rtN-97-vNQ" secondAttribute="bottom" constant="10" id="eOj-f7-FMP"/>
-                    <constraint firstItem="e3Y-Pq-Pse" firstAttribute="leading" secondItem="cki-ib-IE3" secondAttribute="trailing" constant="8" symbolic="YES" id="hev-QI-Wcx"/>
-                    <constraint firstAttribute="trailing" secondItem="ePv-jp-HSC" secondAttribute="trailing" constant="1.5" id="iAp-2m-Dr5"/>
+                    <constraint firstItem="e3Y-Pq-Pse" firstAttribute="top" secondItem="rtN-97-vNQ" secondAttribute="bottom" constant="1" id="eOj-f7-FMP"/>
+                    <constraint firstItem="e3Y-Pq-Pse" firstAttribute="leading" secondItem="cki-ib-IE3" secondAttribute="trailing" constant="5" id="hev-QI-Wcx"/>
+                    <constraint firstAttribute="trailing" secondItem="ePv-jp-HSC" secondAttribute="trailing" constant="2" id="iAp-2m-Dr5"/>
                     <constraint firstAttribute="bottom" secondItem="ePv-jp-HSC" secondAttribute="bottom" constant="2" id="p2q-4e-mdf"/>
                     <constraint firstItem="cki-ib-IE3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="vjd-PT-4ld"/>
                 </constraints>

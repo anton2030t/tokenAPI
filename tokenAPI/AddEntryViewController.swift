@@ -10,11 +10,7 @@ import UIKit
 
 class AddEntryViewController: UIViewController {
 
-    var addModel = [AddEntryModel]()
-    var getModel = [GetEntriesModel]()
-    let vc = ViewController()
-    let webManager = WebManager()
-    let cell = EntryCell()
+    var reloadVCsTableView: (() -> ())?
     
     @IBOutlet weak var textView: UITextView!
     
@@ -26,9 +22,10 @@ class AddEntryViewController: UIViewController {
 
     @IBAction func saveButton(_ sender: UIButton) {
         
-        cell.entryTextView.text = textView.text
-        vc.tableView.reloadData()
+        reloadVCsTableView?()
 
+        dismiss(animated: true, completion: nil)
+        
 //        vc.tableView.performBatchUpdates({
 //            webManager.addEntry(session: "kakayaTO", body: textView.text) { [weak self] (addModel) in
 //                self?.addModel = addModel
