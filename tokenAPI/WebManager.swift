@@ -41,6 +41,12 @@ class WebManager {
                 completion(newSessionModel)
             } catch let error {
                 completion([])
+                
+//                let alert = UIAlertController(title: "Отсутствует соединение с сервером", message: "Попробуйте снова", preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: "Обновить данные", style: .default, handler: { [weak self] action in
+//                    <#code#>
+//                }))
+                
                 print(error)
             }
             
@@ -65,6 +71,12 @@ class WebManager {
                 completion(getEntriesModel)
             } catch let error {
                 completion([])
+                
+//                let alert = UIAlertController(title: "Отсутствует соединение с сервером", message: "Попробуйте снова", preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: "Обновить данные", style: .default, handler: { action in
+//                    <#code#>
+//                }))
+                
                 print(error)
             }
             
@@ -89,6 +101,12 @@ class WebManager {
                 completion(addEntryModel)
             } catch let error {
                 completion([])
+                
+//                let alert = UIAlertController(title: "Отсутствует соединение с сервером", message: "Попробуйте снова", preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: "Обновить данные", style: .default, handler: { action in
+//                    <#code#>
+//                }))
+                                
                 print(error)
             }
             

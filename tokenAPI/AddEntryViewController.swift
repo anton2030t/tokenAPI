@@ -25,18 +25,6 @@ class AddEntryViewController: UIViewController {
         reloadVCsTableView?()
 
         dismiss(animated: true, completion: nil)
-        
-//        vc.tableView.performBatchUpdates({
-//            webManager.addEntry(session: "kakayaTO", body: textView.text) { [weak self] (addModel) in
-//                self?.addModel = addModel
-//                DispatchQueue.main.async {
-//                    self?.vc.tableView.reloadData()
-//                }
-//            }
-//            vc.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-//        }) { (result) in
-//            self.vc.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
-//        }
     }
     
     @IBAction func cancelButton(_ sender: UIButton) {

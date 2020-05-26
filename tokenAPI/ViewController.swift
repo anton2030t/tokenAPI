@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.register(UINib(nibName: EntryCell.identifier, bundle: Bundle.main), forCellReuseIdentifier: EntryCell.identifier)
     }
 
@@ -26,7 +26,11 @@ class ViewController: UIViewController {
             addVC.reloadVCsTableView = { [weak self] in
                 var entry = Entry(id: "1111", body: addVC.textView.text, da: Date(), dm: Date())
                 entry.body = addVC.textView.text
-                self?.entry.append(entry)
+//                для добавления записей друг за другом
+//                self?.entry.append(entry)
+                self?.entry.insert(entry, at: 0)
+                self?.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+                self?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
                 self?.tableView.reloadData()
             }
             present(addVC, animated: true, completion: nil)
@@ -82,14 +86,3 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
-
-
-
-//func response() {
-//    webManager.getEntries() { [weak self] (entries) in
-//            self?.entries += entries
-//        DispatchQueue.main.async {
-//            self?.tableView.reloadData()
-//        }
-//    }
-//}

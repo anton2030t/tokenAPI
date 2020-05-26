@@ -10,7 +10,6 @@ import UIKit
 
 class EntryCell: UITableViewCell {
 
-    var task: URLSessionDataTask?
     static let identifier = "EntryCell"
     
     @IBOutlet weak var daLabel: UILabel!
@@ -21,10 +20,11 @@ class EntryCell: UITableViewCell {
         super.prepareForReuse()
         
         entryTextView.text = nil
+        daLabel.text = nil
+        dmLabel.text = nil
         isHidden = false
         isSelected = false
         isHighlighted = false
-        task?.cancel()
     }
     
     override func awakeFromNib() {
